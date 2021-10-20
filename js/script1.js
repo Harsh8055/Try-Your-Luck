@@ -1,13 +1,13 @@
 function main() {
     
     let rnum = Math.floor(Math.random() * 3 + 1);
-    console.log(rnum);
+    // console.log(rnum);
     const arr = [1, 2, 3];
     var indexnum = arr.indexOf(rnum);
     sessionStorage.setItem('indexnum', indexnum )
     var symbolEle = document.getElementsByClassName(indexnum)[0];
     symbolEle.innerText = "*";
-    console.log(symbolEle.innerText);
+    // console.log(symbolEle.innerText);s
 }  
 main();
 
@@ -21,7 +21,7 @@ function show(x) {
     let indexnum = sessionStorage.getItem('indexnum');
     containerx.setAttribute("style", "visibility: hidden");
     if(x == indexnum) {
-        console.log(x);
+        // console.log(x);
         win();
     }
     else {
@@ -29,7 +29,7 @@ function show(x) {
     }
 }
 else {
-    console.log("please click on replay");
+    // console.log("please click on replay");
 }
 
    
@@ -41,7 +41,7 @@ function win () {
     won.appendChild(t);
     let res = document.getElementsByClassName("result")[0];
     res.append(won);
-    console.log("you won")
+    // console.log("you won")
 }
 function lose() {
     let lost = document.createElement('h1')
@@ -50,7 +50,7 @@ function lose() {
     lost.appendChild(t);
     let res = document.getElementsByClassName("result")[0];
     res.append(lost);
-    console.log("you lost")
+    // console.log("you lost")
     
 }
 let refresh = document.getElementById('refresh')
